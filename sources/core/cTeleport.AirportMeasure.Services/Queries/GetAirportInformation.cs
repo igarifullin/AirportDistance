@@ -6,5 +6,10 @@ namespace cTeleport.AirportMeasure.Services.Queries
     public class GetAirportInformation : IQuery<AirportModel> 
     {
         public string IataCode { get; set; }
+
+        public GetAirportInformation(string iataCode)
+        {
+            IataCode = iataCode;
+        }
     }
 }

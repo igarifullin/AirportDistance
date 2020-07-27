@@ -1,8 +1,8 @@
 ﻿using System.Threading;
 using System.Threading.Tasks;
 using cTeleport.AirportMeasure.Core;
+using cTeleport.AirportMeasure.Core.Enums;
 using cTeleport.AirportMeasure.Core.Results;
-using cTeleport.AirportMeasure.Data.Enums;
 
 namespace cTeleport.AirportMeasure.Services.ValidationRules
 {

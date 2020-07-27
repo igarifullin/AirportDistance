@@ -1,4 +1,5 @@
-﻿using cTeleport.AirportMeasure.Core;
+﻿using System.Text.RegularExpressions;
+using cTeleport.AirportMeasure.Core;
 
 namespace cTeleport.AirportMeasure.Services.ValidationRules
 {
@@ -7,5 +8,17 @@ namespace cTeleport.AirportMeasure.Services.ValidationRules
         public string Value { get; set; }
 
         public string Regex { get; set; }
+
+        public StringMatchRegexFormatRule(string value, string regex)
+        {
+            Value = value;
+            Regex = regex;
+        }
+
+        public StringMatchRegexFormatRule(string value, Regex regex)
+        {
+            Value = value;
+            Regex = regex.ToString();
+        }
     }
 }

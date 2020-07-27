@@ -1,4 +1,4 @@
-﻿namespace cTeleport.AirportMeasure.Data.Enums
+﻿namespace cTeleport.AirportMeasure.Core.Enums
 {
     public enum SystemErrorCodes
     {
@@ -7,5 +7,7 @@
         InvalidRequest = -2,
 
         EmptyRequest = -3,
+
+        NotFound = -404,
     }
 }

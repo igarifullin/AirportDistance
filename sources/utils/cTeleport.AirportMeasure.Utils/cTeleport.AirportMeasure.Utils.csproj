@@ -8,8 +8,4 @@
       <PackageReference Include="MediatR" Version="8.0.2" />
     </ItemGroup>
 
-    <ItemGroup>
-      <ProjectReference Include="..\..\core\cTeleport.AirportMeasure.Core\cTeleport.AirportMeasure.Core.csproj" />
-    </ItemGroup>
-
 </Project>

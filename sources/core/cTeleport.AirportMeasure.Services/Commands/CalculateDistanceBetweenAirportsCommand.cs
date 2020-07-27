@@ -1,4 +1,5 @@
 ﻿using cTeleport.AirportMeasure.Core;
+using cTeleport.AirportMeasure.Core.Results;
 using cTeleport.AirportMeasure.Data;
 
 namespace cTeleport.AirportMeasure.Services.Commands
@@ -8,13 +9,19 @@ namespace cTeleport.AirportMeasure.Services.Commands
         public AirportModel From { get; set; }
         
         public AirportModel To { get; set; }
+
+        public CalculateDistanceBetweenAirportsCommand(AirportModel from, AirportModel to)
+        {
+            From = from;
+            To = to;
+        }
     }
 
     public class CalculateDistanceBetweenAirportsCommandResult
     {
-        public string FromAirportName { get; set; }
+        public AirportModel From { get; set; }
         
-        public string ToAirportName { get; set; }
+        public AirportModel To { get; set; }
 
         public double Distance { get; set; }
     }
