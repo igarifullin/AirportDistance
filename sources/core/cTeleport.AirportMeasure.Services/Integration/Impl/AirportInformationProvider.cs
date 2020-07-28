@@ -18,7 +18,7 @@ namespace cTeleport.AirportMeasure.Services.Integration.Impl
             _httpClient = httpClient;
         }
 
-        public async Task<Result<AirportModel>> GetAirportAsync(string iataCode)
+        public async Task<Result<AirportDto>> GetAirportAsync(string iataCode)
         {
             var uri = new Uri(iataCode, UriKind.Relative);
             var httpResponse = await _httpClient.GetAsync(uri);
@@ -35,7 +35,7 @@ namespace cTeleport.AirportMeasure.Services.Integration.Impl
             }
 
             var responseBody = await httpResponse.Content.ReadAsStringAsync();
-            var model = JsonConvert.DeserializeObject<AirportModel>(responseBody);
+            var model = JsonConvert.DeserializeObject<AirportDto>(responseBody);
 
             return model;
         }

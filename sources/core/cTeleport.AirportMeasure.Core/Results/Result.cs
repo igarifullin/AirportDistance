@@ -72,6 +72,7 @@ namespace cTeleport.AirportMeasure.Core.Results
         public Result(TData data, params Error[] errors)
         {
             Data = data;
+            WithError(errors);
         }
 
         public TData Data { get; }

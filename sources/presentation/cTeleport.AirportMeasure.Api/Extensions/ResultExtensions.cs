@@ -1,4 +1,5 @@
-﻿using cTeleport.AirportMeasure.Core.Enums;
+﻿using cTeleport.AirportMeasure.Api.Models;
+using cTeleport.AirportMeasure.Core.Enums;
 using cTeleport.AirportMeasure.Core.Results;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,12 +11,13 @@ namespace cTeleport.AirportMeasure.Api.Extensions
         {
             if (!result.IsSuccess)
             {
+                var error = ErrorModel.FromResult(result);
                 switch (result.ErrorCode)
                 {
                     case (int) SystemErrorCodes.NotFound:
-                        return new NotFoundObjectResult(result);
+                        return new NotFoundObjectResult(error);
                     default:
-                        return new BadRequestObjectResult(result);
+                        return new BadRequestObjectResult(error);
                 }
             }
             
@@ -26,12 +28,13 @@ namespace cTeleport.AirportMeasure.Api.Extensions
         {
             if (!result.IsSuccess)
             {
+                var error = ErrorModel.FromResult(result);
                 switch (result.ErrorCode)
                 {
                     case (int) SystemErrorCodes.NotFound:
-                        return new NotFoundObjectResult(result);
+                        return new NotFoundObjectResult(error);
                     default:
-                        return new BadRequestObjectResult(result);
+                        return new BadRequestObjectResult(error);
                 }
             }
             

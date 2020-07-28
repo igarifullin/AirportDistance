@@ -34,7 +34,8 @@ namespace cTeleport.AirportMeasure.Core
                         .AsImplementedInterfaces()
                         .WithTransientLifetime();
                 })
-                .AddTransient(typeof(CacheableQueryHandler<,>));
+                .AddTransient(typeof(CacheableQueryHandler<,>))
+                .AddTransient(typeof(Lazy<>));
         }
         
         public static IServiceCollection AddAllCommands(this IServiceCollection services, Assembly assembly)

@@ -1,26 +1,41 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{4D206D36-DEF5-4178-9024-765E832091A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{A80C4D93-4ACA-4534-9CA2-B2AE6B826A3C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.Data", "sources\core\cTeleport.AirportMeasure.Data\cTeleport.AirportMeasure.Data.csproj", "{87BA53C8-866C-44DC-B930-F3719624942B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cTeleport.AirportMeasure.Data", "sources\core\cTeleport.AirportMeasure.Data\cTeleport.AirportMeasure.Data.csproj", "{87BA53C8-866C-44DC-B930-F3719624942B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.Services", "sources\core\cTeleport.AirportMeasure.Services\cTeleport.AirportMeasure.Services.csproj", "{3B3078BE-6833-42FD-B60B-837EA02DA723}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cTeleport.AirportMeasure.Services", "sources\core\cTeleport.AirportMeasure.Services\cTeleport.AirportMeasure.Services.csproj", "{3B3078BE-6833-42FD-B60B-837EA02DA723}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.DataAccess", "sources\infrastructure\cTeleport.AirportMeasure.DataAccess\cTeleport.AirportMeasure.DataAccess.csproj", "{8296D78B-6358-4C08-9ACC-0BF27C20DC74}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cTeleport.AirportMeasure.DataAccess", "sources\infrastructure\cTeleport.AirportMeasure.DataAccess\cTeleport.AirportMeasure.DataAccess.csproj", "{8296D78B-6358-4C08-9ACC-0BF27C20DC74}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{374267B1-287C-48C5-90EB-0FC9D6AE891C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "utils", "utils", "{1FF08A1B-A70A-46DD-82DD-78E95A799167}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.Utils", "sources\utils\cTeleport.AirportMeasure.Utils\cTeleport.AirportMeasure.Utils.csproj", "{28A50F9A-F71A-4AFD-AD6F-CA18D5FC3392}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cTeleport.AirportMeasure.Utils", "sources\utils\cTeleport.AirportMeasure.Utils\cTeleport.AirportMeasure.Utils.csproj", "{28A50F9A-F71A-4AFD-AD6F-CA18D5FC3392}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.Core", "sources\core\cTeleport.AirportMeasure.Core\cTeleport.AirportMeasure.Core.csproj", "{AFBAEF22-C2DE-4661-804E-A2B89A11322D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cTeleport.AirportMeasure.Core", "sources\core\cTeleport.AirportMeasure.Core\cTeleport.AirportMeasure.Core.csproj", "{AFBAEF22-C2DE-4661-804E-A2B89A11322D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.Api", "sources\presentation\cTeleport.AirportMeasure.Api\cTeleport.AirportMeasure.Api.csproj", "{83096282-03E4-4ED2-B79F-5B4ECD6A6C7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cTeleport.AirportMeasure.Api", "sources\presentation\cTeleport.AirportMeasure.Api\cTeleport.AirportMeasure.Api.csproj", "{83096282-03E4-4ED2-B79F-5B4ECD6A6C7F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sources", "sources", "{F2329F0C-3CCA-4103-819B-33B283B17DE4}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{52B82B87-FBC1-4FC5-BE84-EEE806AC0B98}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{43C2FF14-2C62-433C-8B7B-DB08D663E51D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{601792E6-6530-4489-9F61-770CEE74FD31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.Services.Tests", "tests\core\cTeleport.AirportMeasure.Services.Tests\cTeleport.AirportMeasure.Services.Tests.csproj", "{4D970BC7-FC08-498F-B669-D19F132CFC56}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{2C707401-41D9-4B99-BC1D-395D9C6CB655}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.Api.Tests", "tests\presentation\cTeleport.AirportMeasure.Api.Tests\cTeleport.AirportMeasure.Api.Tests.csproj", "{17CFF4CC-144D-484C-B399-839B193FBB91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -52,17 +67,39 @@ Global
 		{83096282-03E4-4ED2-B79F-5B4ECD6A6C7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{83096282-03E4-4ED2-B79F-5B4ECD6A6C7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{83096282-03E4-4ED2-B79F-5B4ECD6A6C7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52B82B87-FBC1-4FC5-BE84-EEE806AC0B98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52B82B87-FBC1-4FC5-BE84-EEE806AC0B98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52B82B87-FBC1-4FC5-BE84-EEE806AC0B98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52B82B87-FBC1-4FC5-BE84-EEE806AC0B98}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D970BC7-FC08-498F-B669-D19F132CFC56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D970BC7-FC08-498F-B669-D19F132CFC56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D970BC7-FC08-498F-B669-D19F132CFC56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D970BC7-FC08-498F-B669-D19F132CFC56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17CFF4CC-144D-484C-B399-839B193FBB91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17CFF4CC-144D-484C-B399-839B193FBB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17CFF4CC-144D-484C-B399-839B193FBB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17CFF4CC-144D-484C-B399-839B193FBB91}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{4D206D36-DEF5-4178-9024-765E832091A5} = {F2329F0C-3CCA-4103-819B-33B283B17DE4}
+		{A80C4D93-4ACA-4534-9CA2-B2AE6B826A3C} = {F2329F0C-3CCA-4103-819B-33B283B17DE4}
 		{87BA53C8-866C-44DC-B930-F3719624942B} = {4D206D36-DEF5-4178-9024-765E832091A5}
 		{3B3078BE-6833-42FD-B60B-837EA02DA723} = {4D206D36-DEF5-4178-9024-765E832091A5}
 		{8296D78B-6358-4C08-9ACC-0BF27C20DC74} = {A80C4D93-4ACA-4534-9CA2-B2AE6B826A3C}
+		{374267B1-287C-48C5-90EB-0FC9D6AE891C} = {F2329F0C-3CCA-4103-819B-33B283B17DE4}
+		{1FF08A1B-A70A-46DD-82DD-78E95A799167} = {F2329F0C-3CCA-4103-819B-33B283B17DE4}
 		{28A50F9A-F71A-4AFD-AD6F-CA18D5FC3392} = {1FF08A1B-A70A-46DD-82DD-78E95A799167}
 		{AFBAEF22-C2DE-4661-804E-A2B89A11322D} = {4D206D36-DEF5-4178-9024-765E832091A5}
 		{83096282-03E4-4ED2-B79F-5B4ECD6A6C7F} = {374267B1-287C-48C5-90EB-0FC9D6AE891C}
-		{1FF08A1B-A70A-46DD-82DD-78E95A799167} = {F2329F0C-3CCA-4103-819B-33B283B17DE4}
-		{374267B1-287C-48C5-90EB-0FC9D6AE891C} = {F2329F0C-3CCA-4103-819B-33B283B17DE4}
-		{A80C4D93-4ACA-4534-9CA2-B2AE6B826A3C} = {F2329F0C-3CCA-4103-819B-33B283B17DE4}
-		{4D206D36-DEF5-4178-9024-765E832091A5} = {F2329F0C-3CCA-4103-819B-33B283B17DE4}
+		{601792E6-6530-4489-9F61-770CEE74FD31} = {43C2FF14-2C62-433C-8B7B-DB08D663E51D}
+		{4D970BC7-FC08-498F-B669-D19F132CFC56} = {601792E6-6530-4489-9F61-770CEE74FD31}
+		{2C707401-41D9-4B99-BC1D-395D9C6CB655} = {43C2FF14-2C62-433C-8B7B-DB08D663E51D}
+		{17CFF4CC-144D-484C-B399-839B193FBB91} = {2C707401-41D9-4B99-BC1D-395D9C6CB655}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30E895EA-79F9-4917-9673-A4AACB8972FE}
 	EndGlobalSection
 EndGlobal
