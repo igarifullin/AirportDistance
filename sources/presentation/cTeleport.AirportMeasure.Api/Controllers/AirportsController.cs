@@ -17,6 +17,16 @@ namespace cTeleport.AirportMeasure.Api.Controllers
             _mediator = mediator;
         }
 
+        [HttpGet]
+        [Route("{iata}")]
+        public async Task<IActionResult> Get(string iata)
+        {
+            var result = await _mediator.ExecuteAsync(Scenarios.GetAirportInformation(iata));
+
+            return result.ToObjectResult();
+        }
+
+        [HttpGet]
         [Route("distance")]
         public async Task<IActionResult> Distance(string from, string to)
         {

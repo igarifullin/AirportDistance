@@ -9,6 +9,11 @@ namespace cTeleport.AirportMeasure.Services.Pipelines
 {
     public class Scenarios
     {
+        public static IPipeline<AirportModel> GetAirportInformation(string iata) =>
+            new StringIsNotNullRule(iata)
+                .And(new StringMatchRegexFormatRule(iata, RegexConstants.Iata))
+                .And(new GetAirportInformation(iata));
+
         public static IPipeline<CalculateDistanceBetweenAirportsCommandResult> CalculateDistanceBetweenAirports(string fromIata, string toIata) =>
             new StringIsNotNullRule(fromIata)
             .And(new StringIsNotNullRule(toIata))
