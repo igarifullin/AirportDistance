@@ -18,7 +18,7 @@ namespace cTeleport.AirportMeasure.Api.Tests
 
         private WebApplicationFactory<Startup> CreateApplication()
         {
-            
+            return default;
         }
     }
 }
