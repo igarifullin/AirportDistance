@@ -5,16 +5,22 @@ namespace cTeleport.AirportMeasure.Services.Commands
 {
     public class CalculateDistanceBetweenAirportsCommand : ICommand<CalculateDistanceBetweenAirportsCommandResult>
     {
-        public AirportModel From { get; set; }
+        public AirportDto From { get; set; }
         
-        public AirportModel To { get; set; }
+        public AirportDto To { get; set; }
+
+        public CalculateDistanceBetweenAirportsCommand(AirportDto from, AirportDto to)
+        {
+            From = from;
+            To = to;
+        }
     }
 
     public class CalculateDistanceBetweenAirportsCommandResult
     {
-        public string FromAirportName { get; set; }
+        public AirportDto From { get; set; }
         
-        public string ToAirportName { get; set; }
+        public AirportDto To { get; set; }
 
         public double Distance { get; set; }
     }

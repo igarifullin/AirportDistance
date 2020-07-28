@@ -1,6 +1,5 @@
 ﻿using System;
 using cTeleport.AirportMeasure.Core;
-using cTeleport.AirportMeasure.Data.Configuration;
 using StackExchange.Redis;
 using Newtonsoft.Json;
 
@@ -12,10 +11,10 @@ namespace cTeleport.AirportMeasure.DataAccess
         private readonly string _keyPrefix;
         private readonly int _dbIndex = -1;
 
-        public RedisCacheableStorage(ConnectionStringsConfig config, string keyPrefix)
+        public RedisCacheableStorage(RedisConfiguration config)
         {
-            _keyPrefix = keyPrefix;
-            var connectionString = config.RedisConnection;
+            _keyPrefix = config.KeyPrefix;
+            var connectionString = config.ConnectionString;
             if (connectionString.Contains(";"))
             {
                 var parts = connectionString.Split(';');

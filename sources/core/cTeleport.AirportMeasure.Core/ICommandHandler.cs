@@ -1,14 +1,17 @@
-﻿using cTeleport.AirportMeasure.Core.Results;
-using MediatR;
+﻿using System.Threading.Tasks;
+using cTeleport.AirportMeasure.Core.Results;
 
 namespace cTeleport.AirportMeasure.Core
 {
-    public interface ICommandHandler<in TCommand> : IRequestHandler<TCommand, Result> where TCommand : ICommand
+    public interface ICommandHandler<in TCommand>
+        where TCommand : ICommand
     {
+        Task<Result> ExecuteAsync(TCommand command);
     }
 
-    public interface ICommandHandler<in TCommand, TResult> : IRequestHandler<TCommand, Result<TResult>>
+    public interface ICommandHandler<in TCommand, TResult>
         where TCommand : ICommand<TResult>
     {
+        Task<Result<TResult>> ExecuteAsync(TCommand command);
     }
 }

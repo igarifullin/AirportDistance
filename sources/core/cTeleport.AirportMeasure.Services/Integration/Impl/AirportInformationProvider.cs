@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Net.Http;
 using System.Threading.Tasks;
+using cTeleport.AirportMeasure.Core.Enums;
 using cTeleport.AirportMeasure.Core.Errors;
 using cTeleport.AirportMeasure.Core.Results;
 using cTeleport.AirportMeasure.Data;
-using cTeleport.AirportMeasure.Data.Enums;
 using Newtonsoft.Json;
 
 namespace cTeleport.AirportMeasure.Services.Integration.Impl
@@ -18,7 +18,7 @@ namespace cTeleport.AirportMeasure.Services.Integration.Impl
             _httpClient = httpClient;
         }
 
-        public async Task<Result<AirportModel>> GetAirportAsync(string iataCode)
+        public async Task<Result<AirportDto>> GetAirportAsync(string iataCode)
         {
             var uri = new Uri(iataCode, UriKind.Relative);
             var httpResponse = await _httpClient.GetAsync(uri);
@@ -35,7 +35,7 @@ namespace cTeleport.AirportMeasure.Services.Integration.Impl
             }
 
             var responseBody = await httpResponse.Content.ReadAsStringAsync();
-            var model = JsonConvert.DeserializeObject<AirportModel>(responseBody);
+            var model = JsonConvert.DeserializeObject<AirportDto>(responseBody);
 
             return model;
         }

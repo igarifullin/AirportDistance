@@ -7,7 +7,7 @@ using cTeleport.AirportMeasure.Services.Integration;
 
 namespace cTeleport.AirportMeasure.Services.Queries
 {
-    public class GetAirportInformationHandler : IQueryHandler<GetAirportInformation, AirportModel>
+    public class GetAirportInformationHandler : IQueryHandler<GetAirportInformation, AirportDto>
     {
         private readonly IAirportInformationProvider _airportInformationProvider;
 
@@ -16,9 +16,14 @@ namespace cTeleport.AirportMeasure.Services.Queries
             _airportInformationProvider = airportInformationProvider;
         }
         
-        public async Task<Result<AirportModel>> Handle(GetAirportInformation request, CancellationToken cancellationToken)
+        public async Task<Result<AirportDto>> Handle(GetAirportInformation request, CancellationToken cancellationToken)
         {
             return await _airportInformationProvider.GetAirportAsync(request.IataCode);
+        }
+
+        public async Task<Result<AirportDto>> ExecuteAsync(GetAirportInformation query)
+        {
+            return await _airportInformationProvider.GetAirportAsync(query.IataCode);
         }
     }
 }

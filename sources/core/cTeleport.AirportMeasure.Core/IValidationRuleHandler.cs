@@ -1,9 +1,11 @@
-﻿using cTeleport.AirportMeasure.Core.Results;
-using MediatR;
+﻿using System.Threading.Tasks;
+using cTeleport.AirportMeasure.Core.Results;
 
 namespace cTeleport.AirportMeasure.Core
 {
-    public interface IValidationRuleHandler<T> : IRequestHandler<T, ValidationResult> where T : IValidationRule
+    public interface IValidationRuleHandler<in TValidationRule> 
+        where TValidationRule : IValidationRule
     {
+        Task<ValidationResult> ExecuteAsync(TValidationRule rule);
     }
 }

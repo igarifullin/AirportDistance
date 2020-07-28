@@ -1,13 +1,12 @@
-﻿using cTeleport.AirportMeasure.Core.Results;
-using MediatR;
+﻿using cTeleport.AirportMeasure.Core.Pipelines;
 
 namespace cTeleport.AirportMeasure.Core
 {
-    public interface ICommand : IRequest<Result>
+    public interface ICommand : IPipeline
     {
     }
 
-    public interface ICommand<TResult> : IRequest<Result<TResult>>
+    public interface ICommand<TResult> : IPipeline<TResult>
     {
     }
 }

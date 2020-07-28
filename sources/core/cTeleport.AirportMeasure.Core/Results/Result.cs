@@ -43,6 +43,8 @@ namespace cTeleport.AirportMeasure.Core.Results
         
         public static Result Success => new Result();
 
+        public static Result Error(Error error) => new Result().WithError(error);
+
         public static Result Error(int errorCode) => new Result().WithError(errorCode);
 
         public static Result Error(int errorCode, string errorMessage) =>
@@ -51,6 +53,10 @@ namespace cTeleport.AirportMeasure.Core.Results
         public static Result<T> SuccessData<T>(T value) => new Result<T>(value);
 
         public static implicit operator Task<Result>(Result r) => Task.FromResult(r);
+
+        public static implicit operator Result(Error[] errors) => new Result().WithError(errors);
+
+        public static implicit operator Result(List<Error> errors) => new Result().WithError(errors.ToArray());
     }
 
     public class Result<TData> : Result
@@ -66,6 +72,7 @@ namespace cTeleport.AirportMeasure.Core.Results
         public Result(TData data, params Error[] errors)
         {
             Data = data;
+            WithError(errors);
         }
 
         public TData Data { get; }

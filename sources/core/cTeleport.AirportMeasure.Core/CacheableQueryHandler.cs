@@ -19,7 +19,7 @@ namespace cTeleport.AirportMeasure.Core
             _cacheableStorage = cacheableStorage;
         }
 
-        public async Task<Result<TResult>> ExecuteAsync(TQuery query, CancellationToken cancellationToken)
+        public async Task<Result<TResult>> ExecuteAsync(TQuery query)
         {
             var value = _cacheableStorage.Get<TResult>(query.Key);
 
@@ -28,7 +28,7 @@ namespace cTeleport.AirportMeasure.Core
                 return Result.SuccessData(value);
             }
             
-            var result = await _queryHandler.Value.Handle(query, cancellationToken);
+            var result = await _queryHandler.Value.ExecuteAsync(query);
             if (result.IsSuccess)
             {
                 _cacheableStorage.Upsert(query.Key, result.Data, query.LifeTime);

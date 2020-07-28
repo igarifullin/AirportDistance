@@ -1,9 +1,8 @@
-﻿using cTeleport.AirportMeasure.Core.Results;
-using MediatR;
+﻿using cTeleport.AirportMeasure.Core.Pipelines;
 
 namespace cTeleport.AirportMeasure.Core
 {
-    public interface IValidationRule : IRequest<ValidationResult>
+    public interface IValidationRule : IPipeline<bool?>
     {
         
     }

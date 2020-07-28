@@ -6,6 +6,6 @@ namespace cTeleport.AirportMeasure.Services.Integration
 {
     public interface IAirportInformationProvider
     {
-        Task<Result<AirportModel>> GetAirportAsync(string iataCode);
+        Task<Result<AirportDto>> GetAirportAsync(string iataCode);
     }
 }

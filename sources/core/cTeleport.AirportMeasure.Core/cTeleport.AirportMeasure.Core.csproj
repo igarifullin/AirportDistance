@@ -5,7 +5,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="MediatR" Version="8.0.2" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="3.1.6" />
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.6" />
+      <PackageReference Include="Scrutor" Version="3.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\utils\cTeleport.AirportMeasure.Utils\cTeleport.AirportMeasure.Utils.csproj" />
     </ItemGroup>
 
 </Project>
