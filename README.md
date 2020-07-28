@@ -9,3 +9,34 @@ A REST service to measure distance in miles between two airports. Airports are i
 | sources\infrastructure | Infrastructure layer (including dataaccess) |
 | sources\presentation | API application |
 | tests | Directory with test projects |
+
+
+### GET@/airports/?from=LED&to=AMS
+Returns distance between airports
+{
+    "from": {
+        "country": "Netherlands",
+        "city": "Amsterdam",
+        "iata": "AMS"
+    },
+    "to": {
+        "country": "Russian Federation",
+        "city": null,
+        "iata": "LED"
+    },
+    "distance": 1116.804973511147
+}
+
+
+### GET@/airports/AMS/
+Returns information about airport
+{
+    "country": "Netherlands",
+    "city": "Amsterdam",
+    "hubs": 7,
+    "iata": "AMS",
+    "location": {
+        "longitude": 4.763385,
+        "latitude": 52.309069
+    }
+}
