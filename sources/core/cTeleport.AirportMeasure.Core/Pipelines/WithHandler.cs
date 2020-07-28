@@ -6,13 +6,13 @@ namespace cTeleport.AirportMeasure.Core.Pipelines
 {
     internal class WithHandler<TData, TResult> : IPipelineItemHandler<With<TData, TResult>, TData>
     {
-        private readonly ICustomMediator _mediator;
-
-        public WithHandler(ICustomMediator mediator)
+        private readonly IMediator _mediator;
+    
+        public WithHandler(IMediator mediator)
         {
             _mediator = mediator;
         }
-
+    
         public async Task<Result<TData>> ExecuteAsync(With<TData, TResult> pipeline)
         {
             var stageResult = await _mediator.ExecuteAsync(pipeline.From);
@@ -21,28 +21,28 @@ namespace cTeleport.AirportMeasure.Core.Pipelines
             {
                 return stageResult.Errors.ToArray();
             }
-
+    
             if (stageResult is ValidationResult boolResult
                 && boolResult.Data == false)
             {
                 return stageResult.Errors.ToArray();
             }
-
+    
             var secondPipeline = pipeline.ToFunc(stageResult.Data);
             return await _mediator.ExecuteAsync(secondPipeline);
         }
     }
 
-    internal class WithHandler<TData, T1, T2> : IPipelineItemHandler<With<TData, T1, T2>, TData>
+    internal class WithMultipleHandler<TData, T1, T2> : IPipelineItemHandler<WithMultiple<TData, T1, T2>, TData>
     {
-        private readonly ICustomMediator _mediator;
+        private readonly IMediator _mediator;
 
-        public WithHandler(ICustomMediator mediator)
+        public WithMultipleHandler(IMediator mediator)
         {
             _mediator = mediator;
         }
 
-        public async Task<Result<TData>> ExecuteAsync(With<TData, T1, T2> pipeline)
+        public async Task<Result<TData>> ExecuteAsync(WithMultiple<TData, T1, T2> pipeline)
         {
             var stageResult1 = await _mediator.ExecuteAsync(pipeline.From1);
             if (!stageResult1.IsSuccess)

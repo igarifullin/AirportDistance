@@ -1,15 +1,9 @@
-﻿using System.Linq;
-using System.Threading;
-using System.Threading.Tasks;
-using cTeleport.AirportMeasure.Core;
-using cTeleport.AirportMeasure.Core.Extensions;
+﻿using cTeleport.AirportMeasure.Core.Extensions;
 using cTeleport.AirportMeasure.Core.Pipelines;
-using cTeleport.AirportMeasure.Core.Results;
 using cTeleport.AirportMeasure.Data;
 using cTeleport.AirportMeasure.Services.Commands;
 using cTeleport.AirportMeasure.Services.Queries;
 using cTeleport.AirportMeasure.Services.ValidationRules;
-using MediatR;
 
 namespace cTeleport.AirportMeasure.Services.Pipelines
 {

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Threading;
 using System.Threading.Tasks;
 using cTeleport.AirportMeasure.Core;
 using cTeleport.AirportMeasure.Core.Results;
@@ -9,7 +8,7 @@ namespace cTeleport.AirportMeasure.Services.Commands
 {
     public class CalculateDistanceBetweenLocationsCommandHandler : ICommandHandler<CalculateDistanceBetweenLocationsCommand, double>
     {
-        public Task<Result<double>> Handle(CalculateDistanceBetweenLocationsCommand command, CancellationToken cancellationToken)
+        public Task<Result<double>> ExecuteAsync(CalculateDistanceBetweenLocationsCommand command)
         {
             var R = Constants.EarthRadius;
             var lat1 = command.From.Latitude;

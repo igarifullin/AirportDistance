@@ -1,5 +1,4 @@
 ﻿using cTeleport.AirportMeasure.Core;
-using cTeleport.AirportMeasure.Core.Results;
 using cTeleport.AirportMeasure.Data;
 
 namespace cTeleport.AirportMeasure.Services.Commands

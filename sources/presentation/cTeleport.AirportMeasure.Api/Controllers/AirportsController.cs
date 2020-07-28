@@ -10,9 +10,9 @@ namespace cTeleport.AirportMeasure.Api.Controllers
     [Route("[controller]")]
     public class AirportsController : ControllerBase
     {
-        private readonly ICustomMediator _mediator;
+        private readonly IMediator _mediator;
 
-        public AirportsController(ICustomMediator mediator)
+        public AirportsController(IMediator mediator)
         {
             _mediator = mediator;
         }

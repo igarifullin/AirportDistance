@@ -3,7 +3,7 @@ using cTeleport.AirportMeasure.Core.Results;
 
 namespace cTeleport.AirportMeasure.Core.Pipelines
 {
-    internal interface ISelect<in TData> : IPipeline<TData>
+    internal interface ISelect<in TData> : IInternalPipelineItem, IPipeline<TData>
     {
     }
     

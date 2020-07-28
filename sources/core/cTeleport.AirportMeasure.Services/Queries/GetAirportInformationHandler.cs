@@ -20,5 +20,10 @@ namespace cTeleport.AirportMeasure.Services.Queries
         {
             return await _airportInformationProvider.GetAirportAsync(request.IataCode);
         }
+
+        public async Task<Result<AirportModel>> ExecuteAsync(GetAirportInformation query)
+        {
+            return await _airportInformationProvider.GetAirportAsync(query.IataCode);
+        }
     }
 }

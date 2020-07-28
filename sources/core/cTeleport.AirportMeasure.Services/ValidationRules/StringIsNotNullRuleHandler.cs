@@ -1,5 +1,4 @@
-﻿using System.Threading;
-using System.Threading.Tasks;
+﻿using System.Threading.Tasks;
 using cTeleport.AirportMeasure.Core;
 using cTeleport.AirportMeasure.Core.Enums;
 using cTeleport.AirportMeasure.Core.Results;
@@ -8,7 +7,7 @@ namespace cTeleport.AirportMeasure.Services.ValidationRules
 {
     public class StringIsNotNullRuleHandler : IValidationRuleHandler<StringIsNotNullRule>
     {
-        public Task<ValidationResult> Handle(StringIsNotNullRule rule, CancellationToken cancellationToken)
+        public Task<ValidationResult> ExecuteAsync(StringIsNotNullRule rule)
         {
             var result = new ValidationResult();
 

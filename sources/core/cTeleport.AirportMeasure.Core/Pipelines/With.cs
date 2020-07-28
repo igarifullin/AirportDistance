@@ -2,7 +2,11 @@
 
 namespace cTeleport.AirportMeasure.Core.Pipelines
 {
-    internal class With<TData, TResult> : IPipeline<TData>
+    public interface IWith<in TData> : IPipeline<TData>
+    {
+    }
+    
+    internal class With<TData, TResult> : IInternalPipelineItem, IWith<TData>
     {
         internal readonly Func<TResult, IPipeline<TData>> ToFunc;
         internal readonly IPipeline<TResult> From;
@@ -14,13 +18,13 @@ namespace cTeleport.AirportMeasure.Core.Pipelines
         }
     }
 
-    internal class With<TData, T1, T2> : IPipeline<TData>
+    internal class WithMultiple<TData, T1, T2> : IInternalPipelineItem, IWith<TData>
     {
         internal readonly Func<T1, T2, IPipeline<TData>> ToFunc;
         internal readonly IPipeline<T1> From1;
         internal readonly IPipeline<T2> From2;
 
-        public With(IPipeline<T1> from1, IPipeline<T2> from2, Func<T1, T2, IPipeline<TData>> toFunc)
+        public WithMultiple(IPipeline<T1> from1, IPipeline<T2> from2, Func<T1, T2, IPipeline<TData>> toFunc)
         {
             From1 = from1;
             From2 = from2;

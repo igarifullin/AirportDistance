@@ -1,15 +1,14 @@
 ﻿using System.Linq;
 using System.Threading.Tasks;
 using cTeleport.AirportMeasure.Core.Results;
-using MediatR;
 
 namespace cTeleport.AirportMeasure.Core.Pipelines
 {
     internal class SelectHandler<TSource, TResult> : IPipelineItemHandler<Select<TSource, TResult>, TResult>
     {
-        private readonly ICustomMediator _mediator;
+        private readonly IMediator _mediator;
 
-        public SelectHandler(ICustomMediator mediator)
+        public SelectHandler(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -31,9 +30,9 @@ namespace cTeleport.AirportMeasure.Core.Pipelines
     
     internal class SelectHandler : IPipelineItemHandler<Select>
     {
-        private readonly ICustomMediator _mediator;
+        private readonly IMediator _mediator;
 
-        public SelectHandler(ICustomMediator mediator)
+        public SelectHandler(IMediator mediator)
         {
             _mediator = mediator;
         }
@@ -50,9 +49,9 @@ namespace cTeleport.AirportMeasure.Core.Pipelines
     
     internal class SelectHandler<TData> : IPipelineItemHandler<Select<TData>, TData>
     {
-        private readonly ICustomMediator _mediator;
+        private readonly IMediator _mediator;
 
-        public SelectHandler(ICustomMediator mediator)
+        public SelectHandler(IMediator mediator)
         {
             _mediator = mediator;
         }

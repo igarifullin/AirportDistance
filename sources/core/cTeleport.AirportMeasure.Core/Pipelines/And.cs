@@ -7,7 +7,7 @@ namespace cTeleport.AirportMeasure.Core.Pipelines
     /// <summary>
     /// Класс прохождения этапов друг за другом
     /// </summary>
-    internal class And : IPipeline
+    internal class And : IInternalPipelineItem, IPipeline
     {
         internal readonly List<IPipeline> Pipelines = new List<IPipeline>();
 
