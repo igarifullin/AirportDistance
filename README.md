@@ -9,6 +9,8 @@ A REST service to measure distance in miles between two airports. Airports are i
 | sources\infrastructure | Infrastructure layer (including dataaccess) |
 | sources\presentation | API application |
 | tests | Directory with test projects |
+| tests\core | Unit tests for business logic |
+| tests\presentation | Contains integration and component tests |
 
 
 ### GET@/airports/distance?from=LED&to=AMS
