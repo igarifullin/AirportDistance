@@ -79,6 +79,12 @@ namespace cTeleport.AirportMeasure.Api.Tests
             {
                 AllowAutoRedirect = false
             });
+            _factory.AirportInformationProviderMock
+                .Setup(x => x.GetAirportAsync(iata))
+                .ReturnsAsync(Result.SuccessData(new AirportDto
+                {
+                    Iata = iata
+                }));
 
             // act
             var httpResponse = await client.GetAsync($"/airports/{iata}/");
@@ -90,6 +96,7 @@ namespace cTeleport.AirportMeasure.Api.Tests
             Assert.That(airport.Iata, Is.EqualTo(iata));
 
             // verify
+            _factory.AirportInformationProviderMock.Verify(x => x.GetAirportAsync(iata), Times.Once);
             _factory.AirportInformationProviderMock.VerifyNoOtherCalls();
         }
 
