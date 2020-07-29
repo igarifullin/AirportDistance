@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 using NUnit.Framework;
 using Moq;
 
-namespace cTeleport.AirportMeasure.Api.Tests
+namespace cTeleport.AirportMeasure.Api.IntegrationTests
 {
     public class AirportsControllerTests
     {

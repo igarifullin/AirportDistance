@@ -4,6 +4,10 @@
         <TargetFramework>netcoreapp3.1</TargetFramework>
 
         <IsPackable>false</IsPackable>
+
+        <AssemblyName>cTeleport.AirportMeasure.Api.IntegrationTests</AssemblyName>
+
+        <RootNamespace>cTeleport.AirportMeasure.Api.IntegrationTests</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>

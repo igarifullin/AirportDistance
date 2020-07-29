@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
 
-namespace cTeleport.AirportMeasure.Api.Tests
+namespace cTeleport.AirportMeasure.Api.IntegrationTests
 {
     public class TestWebApplicationFactory : WebApplicationFactory<Startup>
     {
