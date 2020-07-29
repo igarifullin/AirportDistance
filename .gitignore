@@ -168,3 +168,6 @@ $RECYCLE.BIN/
 # Rider
 .idea/
 Visual Studio 2017/Visualizers/attribcache140.bin
+
+# Docker-compose
+docker-compose.override.yml

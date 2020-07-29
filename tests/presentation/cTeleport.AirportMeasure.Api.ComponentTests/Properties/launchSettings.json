@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "cTeleport.AirportMeasure.Api.ComponentTests": {
+      "commandName": "Project"
+    },
+    "Docker": {
+      "commandName": "Docker"
+    }
+  }
+}

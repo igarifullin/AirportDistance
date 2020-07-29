@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/airports/LED"
+  },
+  "response": {
+    "body": {
+		"country":"Russian Federation",
+		"city_iata":"LED",
+		"iata":"LED",
+		"city":"Saint Petersburg",
+		"timezone_region_name":"Europe/Moscow",
+		"country_iata":"RU",
+		"rating":3,
+		"name":"Pulkovo",
+		"location":{
+			"lon":30.270505,
+			"lat":59.799847
+		},
+		"type":"airport",
+		"hubs":2
+	}
+  }
+}

@@ -20,7 +20,7 @@ namespace cTeleport.AirportMeasure.Services.Integration.Impl
 
         public async Task<Result<AirportDto>> GetAirportAsync(string iataCode)
         {
-            var uri = new Uri(iataCode, UriKind.Relative);
+            var uri = new Uri($"airports/{iataCode}", UriKind.Relative);
             var httpResponse = await _httpClient.GetAsync(uri);
             if (!httpResponse.IsSuccessStatusCode)
             {

@@ -11,7 +11,7 @@ A REST service to measure distance in miles between two airports. Airports are i
 | tests | Directory with test projects |
 
 
-### GET@/airports/?from=LED&to=AMS
+### GET@/airports/distance?from=LED&to=AMS
 Returns distance between airports
 {
     "from": {
