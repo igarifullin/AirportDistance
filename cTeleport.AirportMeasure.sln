@@ -31,11 +31,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{43C2FF14
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{601792E6-6530-4489-9F61-770CEE74FD31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.Services.Tests", "tests\core\cTeleport.AirportMeasure.Services.Tests\cTeleport.AirportMeasure.Services.Tests.csproj", "{4D970BC7-FC08-498F-B669-D19F132CFC56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cTeleport.AirportMeasure.Services.Tests", "tests\core\cTeleport.AirportMeasure.Services.Tests\cTeleport.AirportMeasure.Services.Tests.csproj", "{4D970BC7-FC08-498F-B669-D19F132CFC56}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "presentation", "presentation", "{2C707401-41D9-4B99-BC1D-395D9C6CB655}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cTeleport.AirportMeasure.Api.Tests", "tests\presentation\cTeleport.AirportMeasure.Api.Tests\cTeleport.AirportMeasure.Api.Tests.csproj", "{17CFF4CC-144D-484C-B399-839B193FBB91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cTeleport.AirportMeasure.Api.IntegrationTests", "tests\presentation\cTeleport.AirportMeasure.Api.IntegrationTests\cTeleport.AirportMeasure.Api.IntegrationTests.csproj", "{17CFF4CC-144D-484C-B399-839B193FBB91}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "cTeleport.AirportMeasure.Api.ComponentTests", "tests\presentation\cTeleport.AirportMeasure.Api.ComponentTests\cTeleport.AirportMeasure.Api.ComponentTests.csproj", "{66FF20BB-B03B-48E6-9D90-B55AAF0FFF8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,6 +81,10 @@ Global
 		{17CFF4CC-144D-484C-B399-839B193FBB91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17CFF4CC-144D-484C-B399-839B193FBB91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17CFF4CC-144D-484C-B399-839B193FBB91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66FF20BB-B03B-48E6-9D90-B55AAF0FFF8A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66FF20BB-B03B-48E6-9D90-B55AAF0FFF8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66FF20BB-B03B-48E6-9D90-B55AAF0FFF8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66FF20BB-B03B-48E6-9D90-B55AAF0FFF8A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -98,6 +104,7 @@ Global
 		{4D970BC7-FC08-498F-B669-D19F132CFC56} = {601792E6-6530-4489-9F61-770CEE74FD31}
 		{2C707401-41D9-4B99-BC1D-395D9C6CB655} = {43C2FF14-2C62-433C-8B7B-DB08D663E51D}
 		{17CFF4CC-144D-484C-B399-839B193FBB91} = {2C707401-41D9-4B99-BC1D-395D9C6CB655}
+		{66FF20BB-B03B-48E6-9D90-B55AAF0FFF8A} = {2C707401-41D9-4B99-BC1D-395D9C6CB655}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {30E895EA-79F9-4917-9673-A4AACB8972FE}

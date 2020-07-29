@@ -1,0 +1,24 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/airports/AMS"
+  },
+  "response": {
+    "body": {
+		"country":"Netherlands",
+		"city_iata":"AMS",
+		"iata":"AMS",
+		"city":"Amsterdam",
+		"timezone_region_name":"Europe/Amsterdam",
+		"country_iata":"NL",
+		"rating":3,
+		"name":"Amsterdam",
+		"location":{
+			"lon":4.763385,
+			"lat":52.309069
+		},
+		"type":"airport",
+		"hubs":7
+	}
+  }
+}

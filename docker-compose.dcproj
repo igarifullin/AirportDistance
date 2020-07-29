@@ -5,7 +5,7 @@
     <DockerTargetOS>Linux</DockerTargetOS>
     <ProjectGuid>52b82b87-fbc1-4fc5-be84-eee806ac0b98</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
-    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/weatherforecast</DockerServiceUrl>
+    <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/airports/AMS</DockerServiceUrl>
     <DockerServiceName>cteleport.airportmeasure.api</DockerServiceName>
   </PropertyGroup>
   <ItemGroup>
@@ -14,5 +14,8 @@
     </None>
     <None Include="docker-compose.yml" />
     <None Include=".dockerignore" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="docker-compose.component-tests.yml" />
   </ItemGroup>
 </Project>
