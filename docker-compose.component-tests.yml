@@ -26,13 +26,20 @@ services:
       - ASPNETCORE_ConnectionStrings__CTeleportUrl=http://cteleport:3030/
       - ASPNETCORE_ENVIRONMENT=Production
       - ASPNETCORE_URLS=https://+:443;http://+:80
-      - ASPNETCORE_Kestrel__Certificates__Default__Password=123123Gh
-      - ASPNETCORE_Kestrel__Certificates__Default__Path=/https/aspnetapp.pfx
     depends_on:
       - redis
       - cteleport
     ports:
       - "80"
       - "443"
-    volumes:
-      - ~/.aspnet/https/aspnetapp.pfx:/https/aspnetapp.pfx:ro
+
+  integration:
+    depends_on:
+      - app
+      - redis
+      - cteleport
+    environment:
+      - apiUrl=http://app
+    build:
+      context: ./tests/presentation/cTeleport.AirportMeasure.Api.ComponentTests/
+      dockerfile: Dockerfile
