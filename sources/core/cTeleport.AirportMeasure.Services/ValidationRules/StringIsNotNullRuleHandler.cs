@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using cTeleport.AirportMeasure.Core;
-using cTeleport.AirportMeasure.Core.Enums;
 using cTeleport.AirportMeasure.Core.Results;
 
 namespace cTeleport.AirportMeasure.Services.ValidationRules
@@ -13,7 +12,7 @@ namespace cTeleport.AirportMeasure.Services.ValidationRules
 
             if (string.IsNullOrEmpty(rule.Value))
             {
-                result.WithError((int) SystemErrorCodes.InvalidRequest, "Parameter is empty");
+                result.WithError(rule.ErrorCode, rule.ErrorMessage);
             }
 
             return result;
